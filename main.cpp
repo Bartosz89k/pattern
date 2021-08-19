@@ -59,7 +59,7 @@ class MachineFactory {
 
 int main(int, char**) {
     
-    std::cout << "Hello, world! df4 \n";
+    std::cout << "Hello, world! \n";
     
     {
         Machine * mech = new Axe();
@@ -75,7 +75,6 @@ int main(int, char**) {
     }
 
 
-    std::cout << "last part \n" << endl;
     {
         Machine* axe = MachineFactory::createAxe();
         axe->show();

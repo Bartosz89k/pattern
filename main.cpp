@@ -2,12 +2,22 @@
 
 #include <iostream>
 #include "factory.hpp"
+#include "simple_factory.hpp"
 
 using namespace std;
 
 int main(int, char**) {
     
     std::cout << "Hello, world! \n";
+    {
+        SimpleTool toolFact;
+
+        SimpleTool * hammer = toolFact.getTool("Hammer"); //SimpleTool::getTool("Hammer"); (static fcj. only!)
+        hammer->show();
+        
+        SimpleTool * axe = toolFact.getTool("Axe");
+        axe->show();
+    }
     
     {
         Machine * mech = new Axe();
@@ -38,18 +48,18 @@ int main(int, char**) {
     }
 
     {
-        shared_ptr <Machine> humm =  MachineFactory::create_specific("Hummer");
-        humm-> show();
+        shared_ptr <Machine> hammer =  MachineFactory::create_specific("Hammer");
+        hammer-> show();
     }
     
     {
         shared_ptr <Machine> axe =  MachineFactory::create_specific("Axe");
         axe->show();
 
-        shared_ptr <Machine> humm =  MachineFactory::create_specific("Hummer");
-        humm-> show();
+        shared_ptr <Machine> hammer =  MachineFactory::create_specific("Hammer");
+        hammer-> show();
     }
-    
+
     std::cout << "end \n";
 
     return 0;    

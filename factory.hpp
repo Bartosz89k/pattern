@@ -39,19 +39,19 @@ class Axe: public Machine{
     }
 };
 
-class Hummer: public Machine{
+class Hammer: public Machine{
     public:
 
-    Hummer () {
-        cout << "constructing Hummer" << statI << endl;  
+    Hammer () {
+        cout << "constructing Hammer" << statI << endl;  
     }
     
     void show(void) {
-        cout << "hiho Hummer: " << statI << endl;
+        cout << "hiho Hammer: " << statI << endl;
     }
 
-    ~Hummer() {
-        cout << "destructing Hummer" << statI << endl;
+    ~Hammer() {
+        cout << "destructing Hammer" << statI << endl;
     }
 };
 
@@ -78,10 +78,10 @@ class MachineFactory {
             return shared_ptr<Axe> (new Axe());
         }
 
-        else if (type == "Hummer") {
-            return shared_ptr<Hummer> (new Hummer());
+        else if (type == "Hammer") {
+            return shared_ptr<Hammer> (new Hammer());
         }
-        
+
     }
     
 
@@ -91,3 +91,4 @@ class MachineFactory {
 
     // static Machine* createHummer() { return new Hummer(); }
 };
+

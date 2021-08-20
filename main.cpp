@@ -3,12 +3,22 @@
 #include <iostream>
 #include "factory.hpp"
 #include "simple_factory.hpp"
+#include "builder.hpp"
 
 using namespace std;
 
 int main(int, char**) {
     
     std::cout << "Hello, world! \n";
+    {
+        Hammer2 * hammer;
+        Director direct;
+        WarHammer warHammer;
+        direct.setBuilder(&warHammer);
+
+        hammer = direct.getTool();
+
+    }
     {
         SimpleTool toolFact;
 
@@ -18,7 +28,7 @@ int main(int, char**) {
         SimpleTool * axe = toolFact.getTool("Axe");
         axe->show();
     }
-    
+
     {
         Machine * mech = new Axe();
 

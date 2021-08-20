@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/builder.hpp
+
 /media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/factory.hpp
 iostream
 -
@@ -17,4 +19,10 @@ iostream
 -
 factory.hpp
 /media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/factory.hpp
+simple_factory.hpp
+/media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/simple_factory.hpp
+builder.hpp
+/media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/builder.hpp
+
+/media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/simple_factory.hpp
 

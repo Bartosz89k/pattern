@@ -29,13 +29,70 @@ class Builder{
     virtual Head* getHead(void) = 0;
     virtual Handler*  getHandler(void) = 0;
 
-    virtual ~Builder () = 0;
+    virtual ~Builder () = 0; // =0?
 };
 Builder::~Builder()
 {
     std::cout << "Builder pure virtual destructor is called";
 }
 
+
+class WarHammer : public Builder {
+    public:
+
+    Hammer2 * hammer;
+
+    WarHammer () {
+        this->Reset();
+    }
+
+    void Reset () {
+        this->hammer = new Hammer2();
+    }
+
+    
+
+    Head* getHead(void) {
+        hammer->hd = new Head();
+        hammer->hd->weight = 5;
+        // Head * head = new Head();
+        // head->weight = 5;
+    }
+
+    Handler* getHandler(void) {
+        // Handler * hand = new Handler();
+        // hand->length = 15;
+        hammer->hand = new Handler();
+        hammer->hand->length = 15;
+    }
+    ~WarHammer() {
+        cout << "Destructor WarHammer \n" << endl;
+    }
+};
+
+class ConstructionHammer : public Builder {
+    public:
+
+    Hammer2 * hammer;
+
+    //virtual Head* getHead(void) = 0;
+    //virtual Handler*  getHandler(void) = 0;
+    Head* getHead(void) {
+        hammer->hd = new Head();
+        hammer->hd->weight = 1;
+    }
+    
+    Handler* getHandler(void) {
+        hammer->hand = new Handler();
+        hammer->hand->length = 5;
+    }
+
+    ~ConstructionHammer() {
+        cout << "Destructor ConstructionHammer \n" << endl;
+        delete hammer->hd;
+        delete hammer->hand;
+    }
+};
 
 class Director {
     public:
@@ -55,42 +112,5 @@ class Director {
     ~Director() {
         cout << "Destructor Director \n" << endl;
         // delete 
-    }
-};
-
-class WarHammer : public Builder {
-    public:
-
-    Head* getHead(void) {
-        Head * head = new Head();
-        head->weight = 5;
-    }
-
-    Handler* getHandler(void) {
-        Handler * hand = new Handler();
-        hand->length = 15;
-    }
-    ~WarHammer() {
-        cout << "Destructor WarHammer \n" << endl;
-    }
-};
-
-class ConstructionHammer : public Builder {
-    public:
-
-    //virtual Head* getHead(void) = 0;
-    //virtual Handler*  getHandler(void) = 0;
-    Head* getHead(void) {
-        Head * head = new Head();
-        head->weight = 1;
-    }
-    
-    Handler* getHandler(void) {
-        Handler * hand = new Handler();
-        hand->length = 5;
-    }
-
-    ~ConstructionHammer() {
-        cout << "Destructor ConstructionHammer \n" << endl;
     }
 };

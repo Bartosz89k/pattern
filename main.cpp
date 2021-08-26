@@ -6,6 +6,7 @@
 #include "builder.hpp"
 #include "builder_ok.hpp"
 #include "builder_smart_ok.hpp"
+#include "adapter.hpp"
 
 using namespace std;
 
@@ -13,6 +14,28 @@ int main(int, char**) {
     
 
     std::cout << "Hello, world! d \n";
+    // adapter
+    {
+        RoundHole *hole = new RoundHole(5);
+        RoundHole *hole3 = new RoundHole(3);
+        
+        RoundPeg * peg = new RoundPeg;
+
+        hole->checkRadius(peg);
+        cout << hole->checkRadius(peg) << endl;
+        cout << hole3->checkRadius(peg) << endl;
+
+        SquarePeg * squarepeg = new SquarePeg;
+        HoleAdapter * adapt = new HoleAdapter(squarepeg);
+
+        cout << "adopted: " << adapt->getRadius() << endl;
+
+        hole->checkRadius(adapt);
+        cout << hole->checkRadius(adapt) << endl;
+        // cout << 
+
+    }
+
     {
         // using namespace guru;
         guru::Director* director= new guru::Director();
@@ -137,7 +160,7 @@ int main(int, char**) {
         hammer-> show();
     }
 
-    std::cout << "end \n";
+    std::cout << "end asdf \n";
 
     return 0;    
 }

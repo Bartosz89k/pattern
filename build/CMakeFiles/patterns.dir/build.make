@@ -60,15 +60,15 @@ include CMakeFiles/patterns.dir/flags.make
 CMakeFiles/patterns.dir/main.cpp.o: CMakeFiles/patterns.dir/flags.make
 CMakeFiles/patterns.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/patterns.dir/main.cpp.o"
-	/usr/bin/g++-6  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/patterns.dir/main.cpp.o -c /media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/main.cpp
+	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/patterns.dir/main.cpp.o -c /media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/main.cpp
 
 CMakeFiles/patterns.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/patterns.dir/main.cpp.i"
-	/usr/bin/g++-6 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/main.cpp > CMakeFiles/patterns.dir/main.cpp.i
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/main.cpp > CMakeFiles/patterns.dir/main.cpp.i
 
 CMakeFiles/patterns.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/patterns.dir/main.cpp.s"
-	/usr/bin/g++-6 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/main.cpp -o CMakeFiles/patterns.dir/main.cpp.s
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/bk/3f78fad0-f1f5-4783-94ab-8e6ff6e2c664/bk3/src/cpp/github/cmakeQuickStart/main.cpp -o CMakeFiles/patterns.dir/main.cpp.s
 
 # Object files for target patterns
 patterns_OBJECTS = \
